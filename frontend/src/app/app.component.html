@@ -1,0 +1,64 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-6 mt-5">
+      <form [formGroup]="squareF" (ngSubmit)="makeSquare()">
+        <div class="input-group">
+      <input type="text" class="form-control" formControlName="value" placeholder="Enter Value">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+</div>
+<h3 class="mt-2">The Square is: {{result}}</h3>
+</div> -->
+
+<div class="container">
+  <div class="row mt-3" >
+    <div class="col-md-6">
+      <h3 class="text-left">Sample Form</h3>
+      <form [formGroup]="registerF" (ngSubmit)="submitF()">
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label class="fw-normal">Name</label>
+          <input type="text" formControlName="name" placeholder="Enter Name" class="form-control">
+        </div>
+        <div class="col-md-4">
+          <label class="fw-normal">Address</label>
+          <textarea formControlName="address" placeholder="Enter Address" class="form-control"></textarea>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label class="fw-normal">Email</label>
+          <input type="text" formControlName="email" placeholder="Enter Email" class="form-control">
+        </div>
+        <div class="col-md-4">
+          <label class="fw-normal">Mobile</label>
+          <input type="text" formControlName="mobile" placeholder="Enter Mobile" class="form-control" maxlength="10">
+        </div>
+      </div>
+      <div class="text-left mt-2">
+      <button class="btn btn-sm btn-primary" type="submit">Send</button>
+    </div>
+    </form>
+    </div>
+    <div class="col-md-6 text-right" *ngIf="showForm">
+        <h3 class="text-right">Form Details</h3>
+          <div class="col-md-4 mt-2">
+            <label>Name : {{name}}</label>
+          </div>
+          <div class="col-md-4 mt-2">
+            <label>Address : {{address}}</label>
+          </div>
+          <div class="col-md-4 mt-2">
+            <label>Email : {{email}}</label>
+          </div>
+          <div class="col-md-4 mt-2">
+            <label>Mobile : {{mobile}}</label>
+          </div>
+          <div class="text-right mt-2">
+            <button class="btn btn-sm btn-success" type="button" (click)="gotohome()">Magic..!</button>
+          </div>
+    </div>
+  </div>
+</div>
